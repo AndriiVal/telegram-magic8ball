@@ -6,4 +6,4 @@
 ![site](./ball.png)
 
 ## Demo
-[Magic Ball demo](https://t.me/magic8ball_ua_bot?)
+[Magic Ball demo](https://t.me/magic8ball_ua_bot)
