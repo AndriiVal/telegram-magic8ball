@@ -1,6 +1,6 @@
 require 'telegram/bot'
 
-TOKEN   = 'your:telegram_token'
+TOKEN   = ENV['your_telegram_token']
 TEXT    = "Розпочнемо віщування! Сконцентруйтесь на своїх бажаннях... Задайте питання, на яке можна відповісти 'так' або 'ні'... і духи дадуть вам відповідь"
 ANSWERS = [
   "Можливо",
