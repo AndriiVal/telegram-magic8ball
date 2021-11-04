@@ -1,28 +1,28 @@
 require 'telegram/bot'
 
 TOKEN   = ENV['your_telegram_token']
-TEXT    = "Розпочнемо віщування! Сконцентруйтесь на своїх бажаннях... Задайте питання, на яке можна відповісти 'так' або 'ні'... і духи дадуть вам відповідь"
+TEXT    = "Let's start divination! Concentrate on your desires ... Ask a question that can be answered 'yes' or 'no' ... and the spirits will give you the answer"
 ANSWERS = [
-  "Можливо",
-  "Думаю що так",
-  "Так",
-  "Не можу сказати",
-  "Думаю що ні",
-  "Смутно",
-  "Точно ні",
-  "Дуже ймовірно",
-  "Точно так",
-  "Запитайте знову",
-  "Шанси хороші",
-  "Духи говорять ні",
-  "Шансів мало",
-  "Ні",
-  "Запитайте пізніше",
-  "Незрозуміло",
-  "Духи говорять так",
-  "Без сумнівів",
-  "Є сумніви",
-  "Не зараз"
+  "Maybe",
+  "I think yes",
+  "Yes",
+  "I can't say",
+  "I think not",
+  "Fuzzily",
+  "Definitely not",
+  "Very likely",
+  "Definitely yes",
+  "Ask again",
+  "The chances are good",
+  "Spirits say no",
+  "Chances are slim",
+  "No",
+  "Ask later",
+  "Obscurely",
+  "Spirits say yes",
+  "Without a doubt",
+  "There are doubts",
+  "Not now"
 ]
 
 Telegram::Bot::Client.run(TOKEN) do |bot|
@@ -31,7 +31,7 @@ Telegram::Bot::Client.run(TOKEN) do |bot|
     when '/start', '/start start'
       bot.api.send_message(
         chat_id: message.chat.id,
-        text:    "Привіт, #{message.from.first_name}! #{TEXT}"
+        text:    "Hi, #{message.from.first_name}! #{TEXT}"
       )
     else
       bot.api.send_message(
